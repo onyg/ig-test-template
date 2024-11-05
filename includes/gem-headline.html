@@ -1,7 +1,11 @@
-<div class="gem-ig-headline-title">
-    {% include gem-headline-title.html %}
-</div>
-<div class="gem-ig-headline-subtitle">
-    Version {{ site.data.fhir.ig.version }}{% if site.data.info.releaselabel != '' %} - {{ site.data.info.releaselabel }} {% endif %}<br>
-    {% include gem-headline-subtitle.html %}
+<div class="gem-ig-headline-container"> 
+    <div id="gem-ig-headline" class="col-lg-10 col-md-12">
+        <div class="gem-ig-headline-title">
+            {% include gem-headline-title.html %}
+        </div>
+        <div class="gem-ig-headline-subtitle">
+            Version {{ site.data.fhir.ig.version }}{% if site.data.info.releaselabel != '' %} - {{ site.data.info.releaselabel }} {% endif %}<br>
+            {% include gem-headline-subtitle.html %}
+        </div>
+    </div>
 </div>
