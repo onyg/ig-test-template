@@ -1,0 +1,7 @@
+<div class="gem-ig-headline-title">
+    {% include gem-headline-title.html %}
+</div>
+<div class="gem-ig-headline-subtitle">
+    Version {{ site.data.fhir.ig.version }}{% if site.data.info.releaselabel != '' %} - {{ site.data.info.releaselabel }} {% endif %}<br>
+    {% include gem-headline-subtitle.html %}
+</div>

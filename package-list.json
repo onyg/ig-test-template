@@ -1,0 +1,24 @@
+{
+    "package-id": "onyg.fhir.template.test",
+    "title": "The test template for FHIR IGs created by onyg",
+    "canonical": "https://github.com/onyg/ig-test-template",
+    "introduction": "The test template for FHIR IGs created by onyg",
+    "list": [
+      {
+        "version": "current",
+        "desc": "Continuous Integration Build (latest in version control)",
+        "path": "https://github.com/onyg/ig-test-template",
+        "status": "ci-build",
+        "current": true
+      },
+      {
+        "version": "0.0.1",
+        "desc": "First release",
+        "path": "http://fhir.org/templates/onyg.fhir.template.test/0.0.1",
+        "status": "release",
+        "sequence": "Publications",
+        "current": true,
+        "date": "2024-11-05"
+      }
+    ]
+  }

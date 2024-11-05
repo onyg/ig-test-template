@@ -1,0 +1,284 @@
+:root {
+    --fhir-api-doc-get-color: 97, 175, 254;
+    --fhir-api-doc-post-color: 73, 204, 144;
+    --fhir-api-doc-put-color: 252, 161, 48;
+    --fhir-api-doc-delete-color: 249, 62, 62;
+    --fhir-api-doc-head-color: 142, 18, 254;
+    --fhir-api-doc-patch-color: 80, 227, 194;
+}
+
+.fhir-api-doc {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+
+.fhir-api-doc a {
+    color: #000;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+.fhir-api-doc a:hover {
+    color: #0d7395;
+}
+
+.fhir-api-doc a:active {
+    color: #000;
+}
+
+.fhir-api-doc p {
+    padding: 0px;
+}
+
+.fhir-api-doc th {
+    text-align: left;
+    font-weight:bold;
+    font-style: italic;
+}
+
+.fhir-api-doc .operation-block {
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin: 0 0 15px;
+}
+
+.fhir-api-doc .operation-block-summary {
+    all: inherit;
+    border: 0;
+    cursor:default;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .19);
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.operation-block-summary-control {
+    display: flex;
+}
+
+.fhir-api-doc .operation-block-summary-method {
+    border-radius: 3px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 60px;
+    padding: 6px 0;
+    margin: 5px;
+    text-align: center;
+    border-style: none;
+}
+
+.fhir-api-doc .operation-block-summary-path {
+    align-items: center;
+    color: #3b4151;
+    display: flex;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.fhir-api-doc .operation-block-description {
+    padding: 20px;
+}
+
+.fhir-api-doc .operation-block-description.low-padding {
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.fhir-api-doc .operation-block-description.with-table {
+    overflow: scroll;
+}
+
+.fhir-api-doc .operation-block-description.operation-example {
+    padding: 0px 20px;
+}
+
+.fhir-api-doc .operation-block-section-header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.fhir-api-doc .example {
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 60px;
+    padding: 0px 10px 0px 0px;
+    text-align: left;
+    border: 1px solid;
+    border-color: #519ad9;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.fhir-api-doc .example .label {
+    border-radius: 4px 0 0 4px;
+    background-color: #519ad9;
+    color: #fff;
+    padding: 8px;
+    margin-right: 10px;
+    min-width: 60px;
+    font-size: 100%;
+}
+
+.fhir-api-doc .inline-button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.fhir-api-doc button:hover, .fhir-api-doc .active-button {
+    opacity: 0.5;
+}
+
+.fhir-api-doc .example-buttons-container{
+    padding: 3px;
+    text-align: right;
+}
+
+.fhir-api-doc table {
+    max-width: 100%;
+}
+
+.fhir-api-doc table tr td {
+    border-bottom: 1px solid rgba(192, 192, 192, 0.2);
+    border-spacing: 0;
+}
+
+.fhir-api-doc table tr:last-child td {
+    border-bottom: none;
+}
+
+.fhir-api-doc pre {
+    /* background-color: #242424; */
+    background-color: #171c19;
+    color: #fff;
+    overflow: auto;
+    white-space: pre;
+    padding: 10px;
+}
+
+.fhir-api-doc code {
+    color: inherit;
+}
+
+/* Common styles for operation-block by method */
+.fhir-api-doc .operation-block[class*="operation-block-"] {
+    border-color: rgba(var(--fhir-api-doc-color), 1.0);
+    background-color: rgba(var(--fhir-api-doc-color), 0.1);
+}
+
+.fhir-api-doc .operation-block-summary-method[class*="operation-block-"] {
+    background-color: rgba(var(--fhir-api-doc-color), 1.0);
+}
+
+.fhir-api-doc .operation-block[class*="operation-block-"] .example {
+    border-color: rgba(var(--fhir-api-doc-color), 1.0);
+}
+
+.fhir-api-doc .operation-block[class*="operation-block-"] .example .label {
+    background-color: rgba(var(--fhir-api-doc-color), 1.0);
+}
+
+
+/* Specific method colors */
+.fhir-api-doc .operation-block-get {
+    --fhir-api-doc-color: var(--fhir-api-doc-get-color);
+}
+
+.fhir-api-doc .operation-block-post {
+    --fhir-api-doc-color: var(--fhir-api-doc-post-color);
+}
+
+.fhir-api-doc .operation-block-put {
+    --fhir-api-doc-color: var(--fhir-api-doc-put-color);
+}
+
+.fhir-api-doc .operation-block-delete {
+    --fhir-api-doc-color: var(--fhir-api-doc-delete-color);
+}
+
+.fhir-api-doc .operation-block-head {
+    --fhir-api-doc-color: var(--fhir-api-doc-head-color);
+}
+
+.fhir-api-doc .operation-block-patch {
+    --fhir-api-doc-color: var(--fhir-api-doc-patch-color);
+}
+
+/* .gem-ig-copy-container {
+
+}
+.gem-ig-copy-button-wrapper {
+    text-align: right;
+    padding-bottom: 2px;
+}
+
+.gem-ig-copy-button-wrapper button {
+    cursor: pointer;
+    border: #fff solid 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 5px;
+    text-align: right;
+    
+}
+
+.gem-id-code-lang {
+    text-align: left;
+} */
+
+.gem-ig-copy-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+/* Sprachangabe links */
+.gem-id-code-lang {
+    text-align: left;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.187);
+}
+
+.operation-block .gem-id-code-lang {
+    margin-left: -10px;
+    margin-top: -15px;
+    border-bottom-right-radius: 30%;
+    padding: 10px;
+}
+
+/* Kopierbutton rechts */
+.gem-ig-copy-button-wrapper {
+    text-align: right;
+}
+
+.gem-ig-copy-button-wrapper button {
+    cursor: pointer;
+    border: #fff solid 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 5px;
+    font-size: 13px;
+}

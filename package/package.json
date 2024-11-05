@@ -1,0 +1,12 @@
+{
+    "name" : "onyg.fhir.template.test",
+    "type" : "fhir.template",
+    "license" : "CC0-1.0",
+    "description" : "onyg Test FHIR Template",
+    "base" : "fhir.base.template",
+    "canonical": "https://github.com/onyg/ig-test-template",
+    "dependencies" : {
+      "fhir.base.template" : "0.8.1"
+    },
+    "version" : "0.0.1"
+  }
