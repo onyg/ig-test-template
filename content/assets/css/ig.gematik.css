@@ -42,11 +42,17 @@
 }
 
 #ig-status {
-    text-align: right;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.breadcrumb {
+    margin-top: -5px;
 }
 
 table th {
     background: #d6ecff;
+    padding: 4px;
 }
 
 table tr:nth-child(even) {
@@ -55,6 +61,10 @@ table tr:nth-child(even) {
 
 table tr:nth-child(odd) {
     background: #FFF;
+}
+
+table td {
+    padding: 4px;
 }
 
 pre {
