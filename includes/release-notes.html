@@ -1,0 +1,13 @@
+
+{% for release in site.data.release-notes.releases %}
+### Version {{ release.version }}
+
+<ul>
+    {% for requirement in release.requirements %}
+    <li>
+        <strong>{{ requirement.release_status }}:</strong> 
+        <a href="{{ requirement.link }}">{{ requirement.key }}{% if requirement.version > 1 %}-{{ requirement.version }}{% endif %}</a>
+        {% for actor in requirement.actor %}<i>{{ actor }}</i>{% if forloop.last == false %}, {% endif %}{% endfor %} - {{ requirement.title }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
