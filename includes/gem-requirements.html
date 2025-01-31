@@ -1,0 +1,28 @@
+{% for req in site.data.requirements %}
+{% if forloop.first%}
+<table width="100%">
+    <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Anforderung</th>
+        </tr>
+    </thead>
+    <tbody>
+{% endif %}
+{% if req.actor contains include.actor %}
+        <tr>
+            <td>
+                <a class="requirement-link" href="./{{ req.path  | default "#" }}" data-anchor="{{ req.key }}{% if req.version > 1 %}-{{ req.version }}{% endif %}">
+                    {{ req.key }}{% if req.version > 1 %}-{{ req.version }}{% endif %}
+                </a>
+            </td>
+            <td>{{ req.title }}</td>
+            <td>{{ req.conformance }}</td>
+        </tr>
+{% endif %}
+{% if forloop.last %}
+    </tbody>
+</table>
+{% endif %}
+{% endfor %}
