@@ -18,7 +18,15 @@
                 </a>
             </td>
             <td>{{ req.title }}</td>
-            <td>{{ req.conformance }}</td>
+            <td>
+                {% case req.conformance %}
+                    {% when "SHALL" %} MUSS
+                    {% when "SHOULD" %} KANN
+                    {% when "SHOULD_NOT" %} DARF NICHT
+                    {% when "MAY" %} OPTIONAL
+                    {% else %} {{ req.conformance }}
+                {% endcase %}
+            </td>
         </tr>
 {% endif %}
 {% if forloop.last %}
