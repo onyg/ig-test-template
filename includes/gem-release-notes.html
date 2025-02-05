@@ -1,7 +1,8 @@
 
 
 {% for release in site.data.release-notes.releases %}
-### Version {{ release.version }}
+
+{% if release.version == include.version %}
 
 <table class="no-stripe">
     {% for requirement in release.requirements %}
@@ -21,4 +22,6 @@
     </tr>
     {% endfor %}
 </table>
+{% endif %}
+
 {% endfor %}

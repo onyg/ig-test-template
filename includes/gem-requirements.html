@@ -22,7 +22,7 @@
                 {% case req.conformance %}
                     {% when "SHALL" %} MUSS
                     {% when "SHOULD" %} KANN
-                    {% when "SHOULD_NOT" %} DARF NICHT
+                    {% when "SHOULD NOT" %} DARF NICHT
                     {% when "MAY" %} OPTIONAL
                     {% else %} {{ req.conformance }}
                 {% endcase %}
