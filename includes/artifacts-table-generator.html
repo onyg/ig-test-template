@@ -6,8 +6,8 @@
     </colgroup>
     <tbody>
     {% assign with_desc = true %}
-    {% if include.withDesc == "false" %}
-        {% assign width_desc = false %}
+    {% if include.withDesc == false %}
+        {% assign with_desc = false %}
     {% endif %}
     {% for resource in site.data.resources %}
         {% assign allowed = false %}
