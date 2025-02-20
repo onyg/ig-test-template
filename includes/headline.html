@@ -7,7 +7,7 @@
 <div class="gem-ig-headline-container"> 
     <div id="gem-ig-headline" class="col-lg-10 col-md-12">
         <div class="gem-ig-headline-title">
-            {% include gem-headline-title.html %}
+            {% include headline-title.html %}
         </div>
         <div id="ig-status" class="gem-ig-headline-subtitle">
             <span style="display:inline-block;">Version {{site.data.fhir.ig.version}} - {{status}}
@@ -22,6 +22,7 @@
                 {% endif %}
                 {% endfor %}
             </span>
+            {% include headline-subtitle.html %}
         </div>
     </div>
 </div>
