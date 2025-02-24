@@ -1,8 +1,6 @@
 {% assign authorList = include.authors | strip_newlines | strip | split: ',' %}
 {% assign excludeList = include.excludeAuthors | strip_newlines | strip | split: ',' %}
 
-{% for entry in site.data.bibliography.entries %}
-{% if forloop.first %}
 <table>
     <thead>
         <tr>
@@ -11,7 +9,15 @@
         </tr>
     </thead>
     <tbody>
-{% endif %}
+{% if site.data.bibliography.entries.size == 0 %}
+<tr>
+    <td class="bibliography-key">keine</td>
+    <td class="bibliography-desc">
+        &nbsp; 
+    </td>
+</tr>
+{% else %}
+{% for entry in site.data.bibliography.entries %}
     {% assign render = true %}
     {% if authorList.size > 0 %}
         {% if authorList contains entry.author %}
@@ -33,8 +39,7 @@
         </td>
     </tr>
     {% endif %}
-{% if forloop.last %}
+{% endfor %}
+{% endif %}
     </tbody>
 </table>
-{% endif %}
-{% endfor %}
