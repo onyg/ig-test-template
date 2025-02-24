@@ -319,14 +319,3 @@ a.gem-ig-download-btn:hover {
     margin-top: 10px;
     width: 100%;
 }
-
-.ig-bibliography-tooltip {
-    position: absolute;
-    background: rgba(245, 245, 245, 0.9);
-    border: 1px solid #000000;
-    padding: 12px;
-    border-radius: 4px;
-    white-space: nowrap;
-    z-index: 1000;
-    pointer-events: none;
-}
