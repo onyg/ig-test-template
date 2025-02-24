@@ -1,6 +1,9 @@
 {% assign authorList = include.authors | strip_newlines | strip | split: ',' %}
 {% assign excludeList = include.excludeAuthors | strip_newlines | strip | split: ',' %}
-
+{% assign renderEntries = false %}
+{% if site.data.bibliography.entries.size > 0 %}
+{% assign renderEntries = true %}
+{% endif %}
 <table>
     <thead>
         <tr>
@@ -9,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-{% if site.data.bibliography.entries.size == 0 %}
+{% if renderEntries %}
 <tr>
     <td class="bibliography-key">keine</td>
     <td class="bibliography-desc">
