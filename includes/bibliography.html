@@ -1,9 +1,6 @@
 {% assign authorList = include.authors | strip_newlines | strip | split: ',' %}
 {% assign excludeList = include.excludeAuthors | strip_newlines | strip | split: ',' %}
-{% assign renderEntries = false %}
-{% if site.data.bibliography.entries.size > 0 %}
-{% assign renderEntries = true %}
-{% endif %}
+{% assign renderedEntries = false %}
 <table>
     <thead>
         <tr>
@@ -12,14 +9,6 @@
         </tr>
     </thead>
     <tbody>
-{% if renderEntries %}
-<tr>
-    <td class="bibliography-key">keine</td>
-    <td class="bibliography-desc">
-        &nbsp; 
-    </td>
-</tr>
-{% else %}
 {% for entry in site.data.bibliography.entries %}
     {% assign render = true %}
     {% if authorList.size > 0 %}
@@ -41,8 +30,16 @@
             {{ entry.author }}: {{ entry.description }} <a href="{{ entry.link }}" target="_blank">{{ entry.link }}</a> 
         </td>
     </tr>
+    {% assign renderedEntries = true %}
     {% endif %}
 {% endfor %}
+{% if renderEntries == false %}
+<tr>
+    <td class="bibliography-key">keine</td>
+    <td class="bibliography-desc">
+        &nbsp; 
+    </td>
+</tr>
 {% endif %}
     </tbody>
 </table>
