@@ -73,6 +73,7 @@ table tr:nth-child(odd) {
 
 table td {
     padding: 4px;
+    max-width: 750px;
 }
 
 table td.bibliography-key {
