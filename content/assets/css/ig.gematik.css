@@ -73,6 +73,10 @@ table tr:nth-child(odd) {
 
 table td {
     padding: 4px;
+
+}
+
+table.release-notes td {
     max-width: 750px;
 }
 
