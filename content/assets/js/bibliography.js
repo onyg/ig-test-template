@@ -1,3 +1,5 @@
+---
+---
 const literatureData = [
     {% for entry in site.data.bibliography.entries %}
     {
