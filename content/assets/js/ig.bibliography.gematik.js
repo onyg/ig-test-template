@@ -10,3 +10,7 @@ const literatureData = [
     }{% if forloop.last %}{% else %},{% endif %}
     {% endfor %}
 ];
+
+document.addEventListener("DOMContentLoaded", function () {
+    igtools.convertBibliographyToLink(literatureData);
+});
