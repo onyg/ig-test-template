@@ -12,6 +12,7 @@
         <div id="ig-status" class="gem-ig-headline-subtitle">
             <span style="display:inline-block;">Version {{site.data.fhir.ig.version}} - {{status}}
                 {% assign igId = site.data.fhir.ig.id | prepend: "ImplementationGuide/" %}
+                {% comment %}
                 {% for jurisdiction in site.data.resources[igId].jurisdictions %}
                 {% if jurisdiction.flag %}
                   <img alt="{{jurisdiction.name}} flag" src="assets/images/{{jurisdiction.flag}}.svg" height="16" title="{{jurisdiction.name}}"/>
@@ -21,6 +22,7 @@
                   {{jurisdiction.name}}
                 {% endif %}
                 {% endfor %}
+                {% endcomment %}
             </span>
             {% include headline-subtitle.html %}
         </div>
