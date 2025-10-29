@@ -1,7 +1,2 @@
 {% assign ig_title = site.data.fhir.ig.title | escape_once %}
-
-{% if ig_title startswith "Implementation Guide" %}
-  {{ ig_title | replace_first: "Implementation Guide", "Implementation Guide<br />" }}
-{% else %}
-  {{ ig_title }}
-{% endif %}
+{{ ig_title | replace_first: 'Implementation Guide', 'Implementation Guide<br />' }}
