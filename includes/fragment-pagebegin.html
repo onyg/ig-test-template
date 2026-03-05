@@ -130,11 +130,11 @@
 {% if shownav == 'y' %}
           <span style="float: var(--ig-right);">
 {% if site.data.pages[localPage].previous %}
-            <a href="{{site.data.pages[localPage].previous}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a> | 
+            <a href="{{site.data.pages[localPage].previous}}">&lt;vorherige</a> | 
 {% endif %}
-            <a href="#bottom">{{site.data.stringsBase[include.lang]['PageBottom']}}</a>
+            <a href="#bottom">unten</a>
 {% if site.data.pages[localPage].next %}
-          | <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage'] | escape_once}}</a>
+          | <a href="{{site.data.pages[localPage].next}}">nächste&gt;</a>
 {% endif %}
           </span>
 {% endif %}
