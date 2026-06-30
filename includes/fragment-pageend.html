@@ -20,17 +20,17 @@
             <tr>
               <td style="text-align:var(--ig-left);">&#xA0;
 {% if site.data.pages[localPage].previous %}
-                <a href="{{site.data.pages[localPage].previous}}">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</a>
+                <a href="{{site.data.pages[localPage].previous}}">&lt;vorherige</a>
 {% else %}
                 <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['PrevPage'] | escape_once}}</span>
 {% endif %}
               </td>
               <td style="text-align:center">
-                <a href="#top">{{site.data.stringsBase[include.lang]['PageTop']}}</a>
+                <a href="#top">oben</a>
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 {% if site.data.pages[localPage].next %}
-                <a href="{{site.data.pages[localPage].next}}">{{site.data.stringsBase[include.lang]['NextPage']}}</a>
+                <a href="{{site.data.pages[localPage].next}}">nächste&gt;</a>
 {% else %}
                 <span style="visibility:hidden">{{site.data.stringsBase[include.lang]['NextPage']}}</span>
 {% endif %}
