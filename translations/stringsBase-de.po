@@ -438,10 +438,6 @@ msgstr "Narrativer Inhalt"
 msgid "Table of Contents"
 msgstr "Inhaltsverzeichnis"
 
-# Table of Contents
-#: Table of Contents
-msgid "Table of Contents"
-msgstr "Inhaltsverzeichnis"
 
 # QAReport
 #: QAReport
